@@ -1,0 +1,64 @@
+const db = require("../connection")
+
+const seed = ({ venueData, reviewData, userData }) => {
+    return db
+    .query(`DROP TABLE IF EXIST users;`)
+    .then(() => {
+        return db.query(`DROP TABLE IF EXIST venues;`)
+    })
+    .then(() => {
+        return db.query(`DROP TABLE IF EXIST reviews;`)
+    })
+    .then(() => {
+        return db.query(`
+        CREATE TABLE users (
+            user_id SERIAL PRIMARY KEY,
+            username VARCHAR NOT NULL,
+            name VARCHAR NOT NULL
+        );`)
+    })
+    .then(() => {
+        return db.query(`
+        CREATE TABLE venues (
+            venue_id SERIAL PRIMARY KEY,
+            place_name VARCHAR NOT NULL,
+            latitude VARCHAR NOT NULL,
+            longitude VARCHAR NOT NULL,
+            average_star_rating DECIMAL(2,1)
+        );`)
+    })
+    .then(() => {
+        return db.query(`
+        CREATE TABLE reviews (
+            review_id SERIAL PRIMARY KEY,
+            place_name VARCHAR REFERENCES venues(place_name),
+            author VARCHAR REFERENCES users(username),
+            body VARCHAR NOT NULL,
+            star_rating DECIMAL(2,1)
+        );`)
+    })
+    .then(() => {
+        const insertUsersQueryStr = format(
+            `INSERT INTO users (username, name) VALUES %L;`, userData.map(({username, name}) => [username,name])
+        )
+
+        return db.query(insertUsersQueryStr)
+    })
+    .then(() => {
+        const insertVenuesQueryStr = format(
+            `INSERT INTO venues (place_name, latitude, longitude, average_star_rating);`,
+            venueData.map(({place_name, latitude, longitude, average_star_rating}) => [
+                place_name, 
+                latitude, 
+                longitude, 
+                average_star_rating])
+        )
+        
+        return db.query(insertVenuesQueryStr)
+    })
+    .then(() => {
+        
+
+
+    })
+}

@@ -1,0 +1,5 @@
+DROP DATABASE IF EXISTS reviewar_test;
+DROP DATABASE IF EXISTS reviewar;
+
+CREATE DATABASE reviewar_test;
+CREATE DATABASE reviewar;

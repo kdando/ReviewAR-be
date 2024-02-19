@@ -1,13 +1,15 @@
+const format = require("pg-format")
+
 const db = require("../connection")
 
 const seed = ({ venueData, reviewData, userData }) => {
     return db
-    .query(`DROP TABLE IF EXIST users;`)
+    .query(`DROP TABLE IF EXISTS users;`)
     .then(() => {
-        return db.query(`DROP TABLE IF EXIST venues;`)
+        return db.query(`DROP TABLE IF EXISTS venues;`)
     })
     .then(() => {
-        return db.query(`DROP TABLE IF EXIST reviews;`)
+        return db.query(`DROP TABLE IF EXISTS reviews;`)
     })
     .then(() => {
         return db.query(`
@@ -39,14 +41,16 @@ const seed = ({ venueData, reviewData, userData }) => {
     })
     .then(() => {
         const insertUsersQueryStr = format(
-            `INSERT INTO users (username, name) VALUES %L;`, userData.map(({username, name}) => [username,name])
+            `INSERT INTO users (username, name) VALUES %L;`, userData.map(({username, name}) => [
+                username,
+                name])
         )
 
         return db.query(insertUsersQueryStr)
     })
     .then(() => {
         const insertVenuesQueryStr = format(
-            `INSERT INTO venues (place_name, latitude, longitude, average_star_rating);`,
+            `INSERT INTO venues (place_name, latitude, longitude, average_star_rating) VALUES %L;`,
             venueData.map(({place_name, latitude, longitude, average_star_rating}) => [
                 place_name, 
                 latitude, 
@@ -57,8 +61,20 @@ const seed = ({ venueData, reviewData, userData }) => {
         return db.query(insertVenuesQueryStr)
     })
     .then(() => {
-        
-
-
+        const insertReviewsQueryStr = format(
+            `INSERT INTO reviews (place_name, author, body, star_rating) VALUES %L;`,
+            reviewData.map(({ place_name, author, body, star_rating }) => [
+                place_name,
+                author,
+                body,
+                star_rating
+            ])
+        );
+        return db.query(insertReviewsQueryStr);
+    })
+    .catch((error) => {
+        console.log("Error seeding database :(", error)
     })
 }
+
+module.exports = seed

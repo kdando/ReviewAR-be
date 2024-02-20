@@ -14,11 +14,13 @@ apiRouter.use("/venues", venuesRouter);
 module.exports = apiRouter
 
 
-// /places
+// /places  DONE
 
-// /:place_id/reviews
+// /places/:place_id  DONE
 
-// /:place_id/reviews/:review_id
+// /places/:place_id/reviews DONE
+
+// /places/:place_id/reviews/:review_id
 
 // /users
 

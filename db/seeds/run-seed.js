@@ -7,3 +7,5 @@ const runSeed = () => {
   };
 
 runSeed()
+
+//////THIS SHOULD BE WITH DEV DATA FOR FINAL VERSION////////

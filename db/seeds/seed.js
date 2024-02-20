@@ -36,6 +36,8 @@ const seed = ({ venueData, userData, reviewData }) => {
             review_id SERIAL PRIMARY KEY,
             venue_id INT REFERENCES venues(venue_id),
             user_id INT REFERENCES users(user_id),
+            author VARCHAR,
+            place_name VARCHAR,
             body VARCHAR NOT NULL,
             star_rating DECIMAL(2,1),
             created_at DATE NOT NULL
@@ -75,11 +77,13 @@ const seed = ({ venueData, userData, reviewData }) => {
         userIdLookup
       );
       const insertReviewsQueryStr = format(
-        `INSERT INTO reviews (venue_id, user_id, body, star_rating, created_at) VALUES %L;`,
-        reviewData.map(
-          ({ venue_id, user_id, body, star_rating, created_at }) => [
+        `INSERT INTO reviews (venue_id, user_id, author, place_name, body, star_rating, created_at) VALUES %L;`,
+        formattedReview.map(
+          ({ venue_id, user_id, author, place_name, body, star_rating, created_at }) => [
             venue_id,
             user_id,
+            author,
+            place_name,
             body,
             star_rating,
             created_at,
@@ -94,3 +98,10 @@ const seed = ({ venueData, userData, reviewData }) => {
 };
 
 module.exports = seed;
+
+
+
+
+
+
+

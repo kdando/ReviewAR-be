@@ -10,7 +10,7 @@ require('dotenv').config({
     throw new Error('PGDATABASE or DATABASE_URL not set');
   }
 
-  console.log(ENV);
+  console.log(ENV, "<<CURRENT ENV VARIABLE");
   
   const config = {};
   

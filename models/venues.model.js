@@ -1,13 +1,32 @@
 const connection = require("../db/connection")
 
 function fetchAllVenues () {
-
     return connection.query(`SELECT * FROM venues;`)
     .then((response) => {
-        console.log(response.rows, "<<<DB QUERY RESULT");
         return response.rows;
+    })
+}
+
+function fetchVenueById (venue_id) {
+
+    return connection.query(
+        `SELECT * FROM venues 
+        WHERE venue_id = $1;`, [venue_id])
+        .then((response) => {
+        return response.rows[0];
     })
 
 }
 
-module.exports = { fetchAllVenues }
+function fetchReviewsByVenue (venue_id) {
+
+    return connection.query(
+        `SELECT * FROM reviews 
+        WHERE venue_id = $1;`, [venue_id])
+        .then((response) => {
+            return response.rows
+        })
+
+}
+
+module.exports = { fetchAllVenues, fetchVenueById, fetchReviewsByVenue }

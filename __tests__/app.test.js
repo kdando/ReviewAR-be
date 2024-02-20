@@ -68,18 +68,84 @@ describe("basic GET requests", () => {
 
     })
 
-    describe("GET api/venues/:venue_id/reviews/:review_id", () => {
+    describe("GET api/reviews/:review_id", () => {
 
         test("status 200 returns specified review object", () => {
 
             return supertest(app)
-            .get(api/venues/2/reviews/1)
-            .then((result) => 
-            console.log(result)
+            .get("/api/reviews/1")
+            .expect(200)
+            .then((result) => {
+                const {review} = result.body
+                expect(review).toMatchObject({
+                    review_id: 1,
+                    venue_id: 1,
+                    user_id: 1,
+                    author: 'johnny123',
+                    place_name: 'The Tipsy Tavern',
+                    body: 'Great atmosphere and friendly staff. The drinks were reasonably priced. Will definitely be back!',
+                    star_rating: '4.0',
+                    created_at: '2021-05-15T23:00:00.000Z'
+                  })
+            }
             )
 
         })
 
     })
 
+})
+/////////////////////////////////////////////////
+
+describe('POST requests', () => {
+
+
+    describe("POST api/reviews/:review_id", () => {
+
+        test('status 201: POST review and returns posted review', () => {
+            const reviewObj = {
+                venue_id: 1,
+                user_id: 1,
+                place_name : "The Tipsy Tavern",
+                author : "johnny123",
+                body : "Good food",
+                star_rating: 4,
+            }
+    
+            return supertest(app)
+            .post("/api/reviews")
+            .send(reviewObj)
+            .expect(201)
+            .then(result => {
+                expect(result.body.review).toMatchObject({
+                    venue_id: 1,
+                    user_id: 1,
+                    author: 'johnny123',
+                    place_name: 'The Tipsy Tavern',
+                    body: 'Good food',
+                    star_rating: '4.0',
+                  })
+            })
+
+        })
+
+    })
+
+})
+
+//////////////////////////////////////////////////////////////
+
+describe('DELETE requests', () => {
+
+    describe("DELETE api/reviews/:review_id", () => {
+
+        test('status 204: DELETE review at specific id', () => {
+            return supertest(app)
+            .delete("/api/reviews/1")
+            .expect(204)
+            .then(result => {
+                expect(result.body).toEqual({})
+            })
+        })
+    })
 })

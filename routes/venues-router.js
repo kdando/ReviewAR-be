@@ -1,12 +1,9 @@
-const { getAllVenues, getVenueById, getReviewsByVenue, getReviewById } = require("../controllers/venues.controller")
+const { getAllVenues, getVenueById, getReviewsByVenue } = require("../controllers/venues.controller")
 
 //create router
 const venuesRouter = require("express").Router();
 
 
-venuesRouter
-.route("/:venue_id/reviews/:review_id")
-.get(getReviewById)
 
 venuesRouter
 .route("/:venue_id/reviews")

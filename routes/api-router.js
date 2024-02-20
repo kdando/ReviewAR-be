@@ -3,11 +3,11 @@ const apiRouter = require("express").Router();
 
 //create other routers
 const venuesRouter = require("./venues-router");
-
+const reviewsRouter = require("./reviews-router")
 
 //subrouters
 apiRouter.use("/venues", venuesRouter);
-
+apiRouter.use("/reviews", reviewsRouter)
 
 
 
@@ -20,7 +20,14 @@ module.exports = apiRouter
 
 // /places/:place_id/reviews DONE
 
-// /places/:place_id/reviews/:review_id
+// reviews/:review_id DONE
 
-// /users
+// POST /reviews DONE
 
+// PATCH /reviews/:review_id
+
+// DELETE /reviews/:review_id
+
+// GET /users
+
+// GET /users/:user_id

@@ -36,11 +36,11 @@ const seed = ({ venueData, userData, reviewData }) => {
             review_id SERIAL PRIMARY KEY,
             venue_id INT REFERENCES venues(venue_id),
             user_id INT REFERENCES users(user_id),
-            author VARCHAR,
-            place_name VARCHAR,
+            author VARCHAR NOT NULL,
+            place_name VARCHAR NOT NULL,
             body VARCHAR NOT NULL,
             star_rating DECIMAL(2,1),
-            created_at DATE NOT NULL
+            created_at DATE
         );`);
     })
     .then(() => {

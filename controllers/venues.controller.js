@@ -3,7 +3,6 @@ const { fetchAllVenues, fetchVenueById, fetchReviewsByVenue } = require("../mode
 
 //GET ALL VENUES
 function getAllVenues (req, res, next) {
-    console.log("WE IN CONTR")
     fetchAllVenues()
     .then((result) => {
         return res.status(200).send({ venues: result })
@@ -41,21 +40,23 @@ function getReviewsByVenue (req, res, next) {
 }
 
 //GET SPECIFIC REVIEW
-function getReviewById (req, res, next) {
 
-    const review_id = req.params.review_id;
+// function getReviewById (req, res, next) {
 
-    getReviewsByVenue()
-    .then(({ reviews }) => {
-        const filteredReviews = reviews.filter((item) => {
-            item.review_id === review_id
-        })
-        return res.status(200).send({ review: filteredReviews[0]})
-    })
-    .catch((next) => {
-        //PSQL ERRORS GO TO APP LEVEL
-    })
+//     const review_id = req.params.review_id;
+//     const {venue_id} = req.params
 
-}
+//     getReviewsByVenue(venue_id)
+//     .then(({ reviews }) => {
+//         const filteredReviews = reviews.filter((item) => {
+//             item.review_id === review_id
+//         })
+//         return res.status(200).send({ review: filteredReviews[0]})
+//     })
+//     .catch((next) => {
+//         //PSQL ERRORS GO TO APP LEVEL
+//     })
 
-module.exports = { getAllVenues, getVenueById, getReviewsByVenue, getReviewById }
+// }
+
+module.exports = { getAllVenues, getVenueById, getReviewsByVenue }

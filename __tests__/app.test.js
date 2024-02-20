@@ -68,4 +68,18 @@ describe("basic GET requests", () => {
 
     })
 
+    describe("GET api/venues/:venue_id/reviews/:review_id", () => {
+
+        test("status 200 returns specified review object", () => {
+
+            return supertest(app)
+            .get(api/venues/2/reviews/1)
+            .then((result) => 
+            console.log(result)
+            )
+
+        })
+
+    })
+
 })

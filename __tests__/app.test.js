@@ -14,7 +14,7 @@ afterAll(() => {
 
 //////////////////////////////
 
-describe("basic GET requests", () => {
+describe("GET requests", () => {
 
     describe("GET /api/venues", () => {
 
@@ -105,6 +105,23 @@ describe("basic GET requests", () => {
                 expect(Array.isArray(users)).toBe(true);
                 expect(users.length).toBe(5);
             })
+        })
+
+    })
+
+    describe("GET /api/users/:user_id", () => {
+
+        test("status 200 returns specified user", () => {
+
+            return supertest(app)
+            .get("/api/users/5")
+            .expect(200)
+            .then((result) => {
+                const user = result.body.user;
+                expect(user.username).toBe("maxxer")
+                expect(user.name).toBe("Maxwell Turner")
+            })
+
         })
 
     })

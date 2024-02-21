@@ -33,7 +33,6 @@ function removeReview(review_id) {
 function updateReview(review_id, new_body, new_star_rating) {
   let query = `UPDATE reviews SET `;
 
-  console.log(new_body, new_star_rating)
 
   if (new_body !== undefined && new_star_rating === undefined) {
     query += `body = $1 WHERE review_id = $2 RETURNING *;`;

@@ -1,4 +1,4 @@
-const {getReviewById, postReview, deleteReview} = require("../controllers/reviews.controller")
+const {getReviewById, postReview, deleteReview, patchReview} = require("../controllers/reviews.controller")
 
 const reviewsRouter = require("express").Router();
 
@@ -8,6 +8,7 @@ reviewsRouter
     .route("/:review_id")
     .get(getReviewById)
     .delete(deleteReview)
+    .patch(patchReview)
 
 //POST
 reviewsRouter

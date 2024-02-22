@@ -8,7 +8,6 @@ function fetchUsers(){
 }
 
 function fetchUserById(user_id) {
-    console.log("HERE")
     const queryStr = `SELECT * FROM users WHERE user_id = $1`
     return connection.query(queryStr, [user_id])
     .then((response) => {

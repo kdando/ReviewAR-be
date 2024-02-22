@@ -1,23 +1,28 @@
-const {fetchUsers, fetchUserById} = require('../models/users.model')
+const { fetchUsers, fetchUserById } = require("../models/users.model");
 const { checkExists } = require("../utils/checkExists");
 
-function getUsers(req, res, next){
-    fetchUsers().then(result => {
-        res.status(200).send({users : result})
-    })
-    .catch(next => {
-    })
-}
+//GET USERS
 
-function getUserById (req, res, next) {
-    const { user_id } = req.params;
-    fetchUserById(user_id)
+function getUsers(req, res, next) {
+  fetchUsers()
     .then((result) => {
-        return res.status(200).send({ user: result })
+      res.status(200).send({ users: result });
     })
-    .catch((next) => {
-
-    })
+    .catch(next); //PSQL ERRORS GO TO APP LEVEL
 }
 
-module.exports = { getUsers, getUserById }
+//GET USER BY USER_ID
+
+function getUserById(req, res, next) {
+  const { user_id } = req.params;
+  const userIdExistence = checkExists("users", "user_id", user_id);
+  const getQuery = fetchUserById(user_id);
+
+  Promise.all([getQuery, userIdExistence])
+    .then((result) => {
+      return res.status(200).send({ user: result[0] });
+    })
+    .catch(next); //PSQL ERRORS GO TO APP LEVEL
+}
+
+module.exports = { getUsers, getUserById };

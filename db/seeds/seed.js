@@ -34,8 +34,8 @@ const seed = ({ venueData, userData, reviewData }) => {
       return db.query(`
         CREATE TABLE reviews (
             review_id SERIAL PRIMARY KEY,
-            venue_id INT REFERENCES venues(venue_id),
-            user_id INT REFERENCES users(user_id),
+            venue_id INT NOT NULL REFERENCES venues(venue_id),
+            user_id INT NOT NULL REFERENCES users(user_id),
             author VARCHAR NOT NULL,
             place_name VARCHAR NOT NULL,
             body VARCHAR NOT NULL,

@@ -1,21 +1,21 @@
 module.exports = [
     {
         place_name: "McDonald's",
-        author: "sophie21",
+        author: "johnny123",
         body: "Disappointing experience. The service was slow and the drinks were overpriced.",
         star_rating: 2,
         created_at : "2021-02-10"
     },
     {
         place_name: "Turtle Bay",
-        author: "maxxer",
+        author: "johnny123",
         body: "Good food and cocktails",
         star_rating: 4,
         created_at : "2022-05-16"
     },
     {
         place_name: "Turtle Bay",
-        author: "olivia_c",
+        author: "johnny123",
         body: "Just love it",
         star_rating: 5,
         created_at : "2023-07-22"
@@ -36,7 +36,7 @@ module.exports = [
     },
     {
         place_name: "McDonald's",
-        author: "david_88",
+        author: "johnny123",
         body: "Delicious food and friendly service. Will definitely come back!",
         star_rating: 4,
         created_at : "2023-01-30"
@@ -64,14 +64,14 @@ module.exports = [
     },
     {
         place_name: "Don Giovanni",
-        author: "lucy_sky",
+        author: "johnny123",
         body: "Lovely place for a relaxing dinner",
         star_rating: 4,
         created_at : "2023-04-05"
     },
     {
         place_name: "Don Giovanni",
-        author: "sophie21",
+        author: "johnny123",
         body: "Exquisite restaurant to enjoy your evening",
         star_rating: 5,
         created_at : "2023-10-20"
@@ -155,7 +155,7 @@ module.exports = [
     },
     {
         place_name: "Giorgio",
-        author: "chloe_b",
+        author: "johnny123",
         body: "Nice ambiance, but the food was mediocre.",
         star_rating: 3,
         created_at : "2022-11-30"
@@ -211,14 +211,14 @@ module.exports = [
     },
     {
         place_name: "Greggs",
-        author: "olivia_c",
+        author: "johnny123",
         body: "Delicious pastries and friendly staff.",
         star_rating: 5,
         created_at : "2023-06-10"
     },
     {
         place_name: "Greggs",
-        author: "david_88",
+        author: "johnny123",
         body: "Freshly baked goods, but limited seating.",
         star_rating: 4,
         created_at : "2021-09-02"
@@ -253,14 +253,14 @@ module.exports = [
     },
     {
         place_name: "Papa John's",
-        author: "alex_the_great",
+        author: "johnny123",
         body: "Tasty pizza with unique toppings.",
         star_rating: 4,
         created_at : "2023-05-30"
     },
     {
         place_name: "Papa John's",
-        author: "chloe_b",
+        author: "johnny123",
         body: "Great pizza, fast service!",
         star_rating: 4,
         created_at: "2023-09-28"
@@ -484,7 +484,7 @@ module.exports = [
     },
     {
         place_name: "Giorgio",
-        author: "sophie21",
+        author: "johnny123",
         body: "Disappointing steak. Overcooked and tough to chew.",
         star_rating: 2,
         created_at: "2023-05-09"

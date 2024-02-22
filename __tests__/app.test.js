@@ -33,7 +33,7 @@ describe("GET requests", () => {
 
     describe("GET /api/venues/:venue_id", () => {
 
-        test("status 200 returns specified venue object", () => {
+        test("status 200: returns specified venue object", () => {
             return supertest(app)
             .get("/api/venues/3")
             .then((result) => {
@@ -46,11 +46,31 @@ describe("GET requests", () => {
             })
         })
 
+        test("status 400: Bad Request when attempting to GET venue by venue_id", () => {
+            return supertest(app)
+            .get("/api/venues/abc")
+            .expect(400)
+            .then((result) => {
+                const { msg } = result.body;
+                expect(msg).toBe("Bad Request");
+            })
+        })
+
+        test("status 404: venue 'Not Found' when attempting to GET venue by venue_id", () => {
+            return supertest(app)
+            .get("/api/venues/30000")
+            .expect(404)
+            .then((result) => {
+                const { msg } = result.body;
+                expect(msg).toBe("Not Found");
+            })
+        })
+
     })
 
     describe("GET api/venues/:venue_id/reviews", () => {
 
-        test("status 200 returns an array of reviews for specified venue", () => {
+        test("status 200: returns an array of reviews for specified venue", () => {
 
             return supertest(app)
             .get("/api/venues/5/reviews")
@@ -59,18 +79,48 @@ describe("GET requests", () => {
                 const reviews = result.body.reviews;
                 expect(Array.isArray(reviews)).toBe(true);
                 expect(reviews.length).toBe(2);
-                expect(reviews[0].author).toBe("emily_g");
-                expect(reviews[0].place_name).toBe("Artistic Alley Gallery");
-                expect(reviews[0].star_rating).toBe("4.0");
+                expect(reviews[0]).toMatchObject(    {
+                    place_name: "Artistic Alley Gallery",
+                    author: "emily_g",
+                    body: "Fascinating art pieces! Loved exploring the gallery.",
+                    star_rating: "4.0",
+                  })
+                  expect(reviews[1]).toMatchObject(    {
+                    place_name: "Artistic Alley Gallery",
+                    author: "alex_the_great",
+                    body: "Not impressed. The exhibits seemed uninspired and poorly curated.",
+                    star_rating: "2.0",
+                  })
             })
 
+        })
+
+        test("status 400: Bad Request when attempting to GET reviews by venue_id", () => {
+            return supertest(app)
+            .get("/api/venues/abc/reviews")
+            .expect(400)
+            .then((result) => {
+                const { msg } = result.body;
+                expect(msg).toBe("Bad Request");
+            })
+        })
+
+
+        test("status 404: reviews 'Not Found' when attempting to GET reviews by venue_id", () => {
+            return supertest(app)
+            .get("/api/venues/50000/reviews")
+            .expect(404)
+            .then((result) => {
+                const { msg } = result.body;
+                expect(msg).toBe("Not Found");
+            })
         })
 
     })
 
     describe("GET api/reviews/:review_id", () => {
 
-        test("status 200 returns specified review object", () => {
+        test("status 200: returns specified review object", () => {
 
             return supertest(app)
             .get("/api/reviews/1")
@@ -92,11 +142,33 @@ describe("GET requests", () => {
 
         })
 
+        test("status 400: Bad Request when attempting to GET review by review_id", () => {
+            return supertest(app)
+            .get("/api/reviews/abc")
+            .expect(400)
+            .then((result) => {
+                const { msg } = result.body;
+                expect(msg).toBe("Bad Request");
+            })
+        })
+
+
+        test("status 404: review 'Not Found' when attempting to GET review by review_id", () => {
+            return supertest(app)
+            .get("/api/reviews/10000")
+            .expect(404)
+            .then((result) => {
+                const { msg } = result.body;
+                expect(msg).toBe("Not Found");
+            })
+        })
+
+
     })
 
     describe("GET /api/users", () => {
 
-        test("status 200 returns array of all users", () => {
+        test("status 200: returns array of all users", () => {
             return supertest(app)
             .get("/api/users")
             .then((result) => {
@@ -111,7 +183,7 @@ describe("GET requests", () => {
 
     describe("GET /api/users/:user_id", () => {
 
-        test("status 200 returns specified user", () => {
+        test("status 200: returns specified user", () => {
 
             return supertest(app)
             .get("/api/users/5")
@@ -124,6 +196,27 @@ describe("GET requests", () => {
 
         })
 
+        test("status 400: Bad Request when attempting to GET user by user_id", () => {
+            return supertest(app)
+            .get("/api/users/abc")
+            .expect(400)
+            .then((result) => {
+                const { msg } = result.body;
+                expect(msg).toBe("Bad Request");
+            })
+        })
+
+
+        test("status 404: user 'Not Found' when attempting to GET user by user_id", () => {
+            return supertest(app)
+            .get("/api/users/5000")
+            .expect(404)
+            .then((result) => {
+                const { msg } = result.body;
+                expect(msg).toBe("Not Found");
+            })
+        })
+
     })
 
 })
@@ -132,7 +225,7 @@ describe("GET requests", () => {
 describe('POST requests', () => {
 
 
-    describe("POST api/reviews/:review_id", () => {
+    describe("POST api/reviews", () => {
 
         test('status 201: POST review and returns posted review', () => {
             const reviewObj = {
@@ -161,6 +254,157 @@ describe('POST requests', () => {
 
         })
 
+        test("status 400: Missing Non Null Property (place_name)", () => {
+            const reviewObj = {
+                venue_id: 1,
+                user_id: 1,
+                author : "johnny123",
+                body : "Good food",
+                star_rating: 4,
+            }
+            return supertest(app)
+            .post("/api/reviews")
+            .send(reviewObj)
+              .expect(400)
+              .then((result) => {
+                const { msg } = result.body;
+                expect(msg).toBe("Missing value on NON NULL property");
+              });
+          });
+          test("status 400: Missing Non Null Property (author)", () => {
+            const reviewObj = {
+                venue_id: 1,
+                user_id: 1,
+                place_name : "The Tipsy Tavern",
+                body : "Good food",
+                star_rating: 4,
+            }
+            return supertest(app)
+            .post("/api/reviews")
+            .send(reviewObj)
+              .expect(400)
+              .then((result) => {
+                const { msg } = result.body;
+                expect(msg).toBe("Missing value on NON NULL property");
+              });
+          });
+          test("status 400: Missing Non Null Property (body)", () => {
+            const reviewObj = {
+                venue_id: 1,
+                user_id: 1,
+                place_name : "The Tipsy Tavern",
+                author : "johnny123",
+                star_rating: 4,
+            }
+            return supertest(app)
+            .post("/api/reviews")
+            .send(reviewObj)
+              .expect(400)
+              .then((result) => {
+                const { msg } = result.body;
+                expect(msg).toBe("Missing value on NON NULL property");
+              });
+          });
+        
+          test("status 400: Missing Non Null Property (user_id)", () => {
+            const reviewObj = {
+                venue_id: 1,
+                place_name : "The Tipsy Tavern",
+                author : "johnny123",
+                body : "Good food",
+                star_rating: 4,
+            }
+            return supertest(app)
+            .post("/api/reviews")
+            .send(reviewObj)
+              .expect(400)
+              .then((result) => {
+                const { msg } = result.body;
+                expect(msg).toBe("Missing value on NON NULL property");
+              });
+          });
+          test("status 400: Missing Non Null Property empty object", () => {
+            const reviewObj = {
+            }
+            return supertest(app)
+            .post("/api/reviews")
+            .send(reviewObj)
+              .expect(400)
+              .then((result) => {
+                const { msg } = result.body;
+                expect(msg).toBe("Missing value on NON NULL property");
+              });
+          });
+          test("status 400: Missing Non Null Property (venue_id)", () => {
+            const reviewObj = {
+                user_id: 1, 
+                place_name : "The Tipsy Tavern",
+                author : "johnny123",
+                body : "Good food",
+                star_rating: 4,
+            }
+            return supertest(app)
+            .post("/api/reviews")
+            .send(reviewObj)
+              .expect(400)
+              .then((result) => {
+                const { msg } = result.body;
+                expect(msg).toBe("Missing value on NON NULL property");
+              });
+          });
+          test("status 400: Missing Non Null Property (venue_id)", () => {
+            const reviewObj = {
+                user_id: 1, 
+                place_name : "The Tipsy Tavern",
+                author : "johnny123",
+                body : "Good food",
+                star_rating: 4,
+            }
+            return supertest(app)
+            .post("/api/reviews")
+            .send(reviewObj)
+              .expect(400)
+              .then((result) => {
+                const { msg } = result.body;
+                expect(msg).toBe("Missing value on NON NULL property");
+              });
+          });
+          test("status 404: venue_id Not Found", () => {
+            const reviewObj = {
+                venue_id: 1000,
+                user_id: 1, 
+                place_name : "The Tipsy Tavern",
+                author : "johnny123",
+                body : "Good food",
+                star_rating: 4,
+            }
+            return supertest(app)
+            .post("/api/reviews")
+            .send(reviewObj)
+              .expect(404)
+              .then((result) => {
+                const { msg } = result.body;
+                expect(msg).toBe("Not Found");
+              });
+          });
+          test("status 404: user_id Not Found", () => {
+            const reviewObj = {
+                venue_id: 1,
+                user_id: 1000, 
+                place_name : "The Tipsy Tavern",
+                author : "johnny123",
+                body : "Good food",
+                star_rating: 4,
+            }
+            return supertest(app)
+            .post("/api/reviews")
+            .send(reviewObj)
+              .expect(404)
+              .then((result) => {
+                const { msg } = result.body;
+                expect(msg).toBe("Not Found");
+              });
+          });
     })
 
 })
@@ -177,6 +421,24 @@ describe('DELETE requests', () => {
             .expect(204)
             .then(result => {
                 expect(result.body).toEqual({})
+            })
+        })
+        test('status 400: Bad Request when deleting review', () => {
+            return supertest(app)
+            .delete("/api/reviews/abc")
+            .expect(400)
+            .then(result => {
+                const { msg } = result.body;
+                expect(msg).toBe("Bad Request");
+            })
+        })
+        test('status 404: review_id Not Found', () => {
+            return supertest(app)
+            .delete("/api/reviews/10000")
+            .expect(404)
+            .then(result => {
+                const { msg } = result.body;
+                expect(msg).toBe("Not Found");
             })
         })
     })

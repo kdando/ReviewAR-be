@@ -40,7 +40,7 @@ const seed = ({ venueData, userData, reviewData }) => {
             place_name VARCHAR NOT NULL,
             body VARCHAR NOT NULL,
             star_rating DECIMAL(2,1),
-            created_at DATE
+            created_at DATE DEFAULT NOW()
         );`);
     })
     .then(() => {

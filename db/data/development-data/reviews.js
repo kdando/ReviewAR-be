@@ -1,51 +1,51 @@
 module.exports = [
     {
-        place_name: "The Tipsy Tavern",
+        place_name: "McDonald's",
         author: "sophie21",
         body: "Disappointing experience. The service was slow and the drinks were overpriced.",
         star_rating: 2,
         created_at : "2021-02-10"
     },
     {
-        place_name: "The Tipsy Tavern",
+        place_name: "Turtle Bay",
         author: "maxxer",
-        body: "Average bar with nothing special to offer. Wouldn't recommend.",
-        star_rating: 3,
+        body: "Good food and cocktails",
+        star_rating: 4,
         created_at : "2022-05-16"
     },
     {
-        place_name: "Silver Screen Cinema",
+        place_name: "Turtle Bay",
         author: "olivia_c",
-        body: "Great selection of movies and comfortable seating.",
+        body: "Just love it",
         star_rating: 5,
         created_at : "2023-07-22"
     },
     {
-        place_name: "Silver Screen Cinema",
+        place_name: "Turtle Bay",
         author: "jackson_j",
-        body: "Decent cinema experience, but the sound system could be better.",
+        body: "Chicken was good but not great overall experience",
         star_rating: 3,
         created_at : "2021-11-05"
     },
     {
-        place_name: "Café Latte",
+        place_name: "Turtle Bay",
         author: "nathan_cool",
-        body: "Best coffee in town! Love the cozy atmosphere.",
+        body: "They know I'm coming back tomorrow.",
         star_rating: 5,
         created_at : "2022-09-14"
     },
     {
-        place_name: "Gourmet Grill",
+        place_name: "McDonald's",
         author: "david_88",
         body: "Delicious food and friendly service. Will definitely come back!",
         star_rating: 4,
         created_at : "2023-01-30"
     },
     {
-        place_name: "Artistic Alley Gallery",
+        place_name: "Turtle Bay",
         author: "mike_w",
-        body: "Amazing collection of art pieces. Highly recommended for art lovers!",
-        star_rating: 5,
+        body: "Great food and lovely staff",
+        star_rating: 4,
         created_at : "2022-04-18"
     },
     {
@@ -63,37 +63,37 @@ module.exports = [
         created_at : "2022-11-11"
     },
     {
-        place_name: "The Lost Library",
+        place_name: "Don Giovanni",
         author: "lucy_sky",
-        body: "Cozy library with a wide selection of books. Perfect for quiet reading.",
+        body: "Lovely place for a relaxing dinner",
         star_rating: 4,
         created_at : "2023-04-05"
     },
     {
-        place_name: "Thrill Seekers Theme Park",
+        place_name: "Don Giovanni",
         author: "sophie21",
-        body: "An exhilarating experience! Loved every ride.",
+        body: "Exquisite restaurant to enjoy your evening",
         star_rating: 5,
         created_at : "2023-10-20"
     },
     {
-        place_name: "Thrill Seekers Theme Park",
+        place_name: "Don Giovanni",
         author: "daniel_p",
-        body: "Fun day out, but the queues were too long.",
+        body: "My family and I are always served the best of food",
         star_rating: 4,
         created_at : "2022-08-14"
     },
     {
-        place_name: "Dive In Movie Theater",
+        place_name: "Don Giovanni",
         author: "olivia_c",
-        body: "Great selection of movies and a unique experience.",
+        body: "Nothing better in Manchester",
         star_rating: 5,
         created_at : "2022-07-30"
     },
     {
-        place_name: "Dive In Movie Theater",
+        place_name: "Don Giovanni",
         author: "mike_w",
-        body: "Fun way to watch movies, but the water was a bit cold.",
+        body: "Coming here again",
         star_rating: 4,
         created_at : "2023-04-02"
     },
@@ -154,7 +154,7 @@ module.exports = [
         created_at : "2023-05-13"
     },
     {
-        place_name: "Carnival Cafe",
+        place_name: "Giorgio",
         author: "chloe_b",
         body: "Nice ambiance, but the food was mediocre.",
         star_rating: 3,
@@ -210,14 +210,14 @@ module.exports = [
         created_at : "2022-12-17"
     },
     {
-        place_name: "Baker's Bliss Bakery",
+        place_name: "Greggs",
         author: "olivia_c",
         body: "Delicious pastries and friendly staff.",
         star_rating: 5,
         created_at : "2023-06-10"
     },
     {
-        place_name: "Baker's Bliss Bakery",
+        place_name: "Greggs",
         author: "david_88",
         body: "Freshly baked goods, but limited seating.",
         star_rating: 4,
@@ -252,14 +252,14 @@ module.exports = [
         created_at : "2022-07-08"
     },
     {
-        place_name: "Mellow Mushroom Pizza",
+        place_name: "Papa John's",
         author: "alex_the_great",
         body: "Tasty pizza with unique toppings.",
         star_rating: 4,
         created_at : "2023-05-30"
     },
     {
-        place_name: "Pizza Palace",
+        place_name: "Papa John's",
         author: "chloe_b",
         body: "Great pizza, fast service!",
         star_rating: 4,
@@ -308,7 +308,7 @@ module.exports = [
         created_at: "2022-04-30"
     },
     {
-        place_name: "Carnival Cafe",
+        place_name: "McDonald's",
         author: "olivia_c",
         body: "Decent food, but the wait times can be long.",
         star_rating: 3,
@@ -329,7 +329,7 @@ module.exports = [
         created_at: "2022-11-14"
     },
     {
-        place_name: "Baker's Bliss Bakery",
+        place_name: "Greggs",
         author: "sophie21",
         body: "Delicious pastries and friendly staff!",
         star_rating: 5,
@@ -350,7 +350,7 @@ module.exports = [
         created_at: "2023-04-18"
     },
     {
-        place_name: "Mellow Mushroom Pizza",
+        place_name: "Papa John's",
         author: "johnny123",
         body: "Decent pizza, but the service was slow.",
         star_rating: 3,
@@ -434,7 +434,7 @@ module.exports = [
         created_at: "2022-09-05"
     },
     {
-        place_name: "Sunny Side Up Breakfast Cafe",
+        place_name: "Greggs",
         author: "emily_g",
         body: "Tasty breakfast options and friendly service.",
         star_rating: 4,
@@ -448,7 +448,7 @@ module.exports = [
         created_at: "2022-12-19"
     },
     {
-        place_name: "Frosty's Ice Cream Parlor",
+        place_name: "McDonald's",
         author: "alex_the_great",
         body: "Delicious ice cream flavors!",
         star_rating: 4,
@@ -476,14 +476,14 @@ module.exports = [
         created_at: "2023-09-28"
     },
     {
-        place_name: "Coastal Breeze Beach Resort",
+        place_name: "Greggs",
         author: "emily_g",
-        body: "Beautiful beachfront location and excellent amenities.",
+        body: "Legendary sausage roll",
         star_rating: 5,
         created_at: "2022-07-12"
     },
     {
-        place_name: "Sizzling Steakhouse",
+        place_name: "Giorgio",
         author: "sophie21",
         body: "Disappointing steak. Overcooked and tough to chew.",
         star_rating: 2,
@@ -553,7 +553,7 @@ module.exports = [
         created_at: "2022-09-30"
     },
     {
-        place_name: "Pizza Palace",
+        place_name: "Papa John's",
         author: "emily_g",
         body: "Greasy pizza and rude staff.",
         star_rating: 2,
@@ -602,7 +602,7 @@ module.exports = [
         created_at: "2022-12-10"
     },
     {
-        place_name: "Carnival Cafe",
+        place_name: "McDonald's",
         author: "sophie21",
         body: "Average food quality and slow service.",
         star_rating: 3,
@@ -623,7 +623,7 @@ module.exports = [
         created_at: "2023-04-04"
     },
     {
-        place_name: "Mellow Mushroom Pizza",
+        place_name: "Papa John's",
         author: "david_88",
         body: "Pizza was burnt and tasted awful.",
         star_rating: 1,
@@ -644,10 +644,10 @@ module.exports = [
         created_at: "2023-05-09"
     },
     {
-        place_name: "Riverside Retreat Campground",
+        place_name: "Giorgio",
         author: "david_88",
-        body: "Loud campers and unsanitary facilities.",
-        star_rating: 1,
+        body: "Alright for the price",
+        star_rating: 3,
         created_at: "2022-10-19"
     },
     {
@@ -658,10 +658,10 @@ module.exports = [
         created_at: "2022-11-05"
     },
     {
-        place_name: "Splash Zone Water Park",
+        place_name: "Giorgio",
         author: "mike_w",
-        body: "Dirty water and unsafe attractions.",
-        star_rating: 2,
+        body: "Loved their steak",
+        star_rating: 5,
         created_at: "2023-02-22"
     },
     {
@@ -672,10 +672,10 @@ module.exports = [
         created_at: "2023-01-14"
     },
     {
-        place_name: "Tranquil Teahouse",
+        place_name: "Giorgio",
         author: "olivia_c",
-        body: "Tea was cold and tasted stale.",
-        star_rating: 1,
+        body: "Great pasta",
+        star_rating: 5,
         created_at: "2022-08-05"
     }
 ]

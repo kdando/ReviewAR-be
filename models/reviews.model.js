@@ -51,9 +51,7 @@ function updateReview(review_id, new_body, new_star_rating) {
       .then((response) => {
         return response.rows[0];
       });
-  }
-
-  if (new_body !== undefined && new_star_rating !== undefined){
+  }else {
     query += `body = $1, star_rating = $2 WHERE review_id = $3 RETURNING *;`;
     return connection
       .query(query, [new_body, new_star_rating, review_id])

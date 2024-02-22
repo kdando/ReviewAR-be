@@ -1,45 +1,45 @@
 module.exports = [
     {
-        place_name: "Sunflower Fields",
-        latitude: "40.7069",
-        longitude: "-74.0171",
-        average_star_rating: 4.3,
-        type: "farm"
-    },
-    {
-        place_name: "Rooftop Rendezvous",
-        latitude: "40.7594",
-        longitude: "-73.9812",
-        average_star_rating: 4.9,
-        type: "bar"
-    },
-    {
-        place_name: "Pirate's Cove Mini Golf",
-        latitude: "40.6898",
-        longitude: "-73.9772",
-        average_star_rating: 4.0,
-        type: "mini golf"
-    },
-    {
-        place_name: "Skyline Observation Deck",
-        latitude: "40.7586",
-        longitude: "-73.9855",
-        average_star_rating: 4.7,
-        type: "observation deck"
-    },
-    {
-        place_name: "Berry Bliss Smoothie Bar",
-        latitude: "40.7419",
-        longitude: "-73.9913",
-        average_star_rating: 4.5,
-        type: "smoothie bar"
-    },
-    {
-        place_name: "Rusty's Dive Bar",
-        latitude: "40.7601",
-        longitude: "-73.9787",
+        place_name: "Mcdonald's",
+        latitude: "53.47593757026069",
+        longitude: "-2.24292696922962",
         average_star_rating: 3.2,
-        type: "bar"
+        type: "fast food"
+    },
+    {
+        place_name: "Giorgio",
+        latitude: "53.47625108375429",
+        longitude: "-2.2420719250028087",
+        average_star_rating: 3.6,
+        type: "restaurant"
+    },
+    {
+        place_name: "Turtle Bay",
+        latitude: "53.476725873419944",
+        longitude: "-2.2425284691147622",
+        average_star_rating: 4.2,
+        type: "restaurant"
+    },
+    {
+        place_name: "Papa John's",
+        latitude: "53.47720799295435",
+        longitude: "-2.243936423774061",
+        average_star_rating: 2.8,
+        type: "fast food"
+    },
+    {
+        place_name: "Don Giovanni",
+        latitude: "53.47691354274546",
+        longitude: "-2.2434500573255463",
+        average_star_rating: 4.4,
+        type: "restaurant"
+    },
+    {
+        place_name: "Greggs",
+        latitude: "53.47719920918008",
+        longitude: "-2.243942955574048",
+        average_star_rating: 4.6,
+        type: "bakery"
     },
     {
         place_name: "The Lost Library",

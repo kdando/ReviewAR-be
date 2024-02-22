@@ -18,11 +18,11 @@ describe("GET requests", () => {
 
     describe("GET /api/venues", () => {
 
-        test("status 200 returns array of all venues", () => {
+        test("status 200: returns array of all venues", () => {
             return supertest(app)
             .get("/api/venues")
+            .expect(200)
             .then((result) => {
-                expect(result.status).toBe(200);
                 const venues = result.body.venues;
                 expect(Array.isArray(venues)).toBe(true);
                 expect(venues.length).toBe(5);
@@ -450,7 +450,7 @@ describe('PATCH requests', () => {
 
     describe("PATCH api/reviews/:review_id", () => {
 
-        test('status 200: PATCH review body at specified review id', () => {
+        test('status 200: PATCH review at specified review id', () => {
             const reviewObj = {
                 new_body : "Really bad food",
                 new_star_rating: 3
@@ -473,7 +473,7 @@ describe('PATCH requests', () => {
                       })
                 })
         })
-        test('status 200: PATCH review body at specified review id (only the body)', () => {
+        test('status 200: PATCH review at specified review id (only the body)', () => {
             const reviewObj = {
                 new_body : "Really bad food",
             }
@@ -495,7 +495,7 @@ describe('PATCH requests', () => {
                       })
                 })
         })
-        test('status 200: PATCH review body at specified review id (only the star_rating)', () => {
+        test('status 200: PATCH review at specified review id (only the star_rating)', () => {
             const reviewObj = {
                 new_star_rating : 1,
             }
@@ -515,6 +515,31 @@ describe('PATCH requests', () => {
                         star_rating: '1.0',
                         created_at: '2021-05-15T23:00:00.000Z'
                       })
+                })
+        })
+
+        test('status 400: Missing value on NON NULL property (empty patch object)', () => {
+            const reviewObj = {};
+            return supertest(app)
+                .patch("/api/reviews/1")
+                .send(reviewObj)
+                .expect(400)
+                .then(result => {
+                    const { msg } = result.body;
+                    expect(msg).toBe("Missing value on NON NULL property");
+                })
+        })
+        test('status 400: Missing value on NON NULL property (Bad property name)', () => {
+            const reviewObj = {
+                sssstar_rating : 5
+            };
+            return supertest(app)
+                .patch("/api/reviews/1")
+                .send(reviewObj)
+                .expect(400)
+                .then(result => {
+                    const { msg } = result.body;
+                    expect(msg).toBe("Missing value on NON NULL property");
                 })
         })
     })

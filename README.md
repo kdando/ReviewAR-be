@@ -9,7 +9,7 @@ This is a **RESTful API** built using Test-Driven-Development (TDD) that is used
 ## Tech Stack
 **Main**: JavaScript, Node.js, Express.js, PostgreSQL, ElephantSQL, Render
 
-**Dev Dependencies**: Supertest, Jest, Jest-Sorted, and Pg-Format
+**Dev Dependencies**: Supertest, Jest, and Pg-Format
 
 ## Endpoints
 

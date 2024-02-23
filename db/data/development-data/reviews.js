@@ -364,63 +364,63 @@ module.exports = [
         created_at: "2023-02-22"
     },
     {
-        place_name: "Zen Garden Meditation Center",
+        place_name: "Dive In Movie Theater",
         author: "sophie21",
         body: "Peaceful atmosphere and helpful instructors.",
         star_rating: 5,
         created_at: "2022-10-12"
     },
     {
-        place_name: "Riverside Retreat Campground",
+        place_name: "Dive In Movie Theater",
         author: "maxxer",
         body: "Beautiful scenery and clean facilities.",
         star_rating: 4,
         created_at: "2023-07-30"
     },
     {
-        place_name: "The Cozy Cottage",
+        place_name: "Dive In Movie Theater",
         author: "emily_g",
         body: "Quaint accommodations with lovely decor.",
         star_rating: 5,
         created_at: "2023-01-14"
     },
     {
-        place_name: "Splash Zone Water Park",
+        place_name: "Dive In Movie Theater",
         author: "johnny123",
         body: "Fun slides and attractions for all ages!",
         star_rating: 4,
         created_at: "2022-08-05"
     },
     {
-        place_name: "Funky Fusion Dance Studio",
+        place_name: "Dive In Movie Theater",
         author: "alex_the_great",
         body: "High-energy classes with talented instructors.",
         star_rating: 5,
         created_at: "2023-05-18"
     },
     {
-        place_name: "Tranquil Teahouse",
+        place_name: "Thrill Seekers Theme Park",
         author: "sophie21",
         body: "Wide variety of teas and a calming ambiance.",
         star_rating: 4,
         created_at: "2022-12-10"
     },
     {
-        place_name: "Wilderness Adventure Tours",
+        place_name: "Thrill Seekers Theme Park",
         author: "emily_g",
         body: "Exciting outdoor excursions with knowledgeable guides.",
         star_rating: 4,
         created_at: "2023-08-22"
     },
     {
-        place_name: "Lively Lanes Arcade",
+        place_name: "Thrill Seekers Theme Park",
         author: "johnny123",
         body: "Lots of games to choose from, great for family fun.",
         star_rating: 4,
         created_at: "2022-10-09"
     },
     {
-        place_name: "Pet Paradise Grooming Salon",
+        place_name: "Thrill Seekers Theme Park",
         author: "alex_the_great",
         body: "Took great care of my pet, will definitely return!",
         star_rating: 5,
@@ -441,7 +441,7 @@ module.exports = [
         created_at: "2023-06-28"
     },
     {
-        place_name: "Starlight Stables",
+        place_name: "Rocky Ridge Hiking Trail",
         author: "johnny123",
         body: "Beautiful horses and great riding trails.",
         star_rating: 5,
@@ -455,21 +455,21 @@ module.exports = [
         created_at: "2023-07-10"
     },
     {
-        place_name: "Tropical Paradise Tiki Bar",
+        place_name: "Rocky Ridge Hiking Trail",
         author: "sophie21",
         body: "Fun drinks and a lively atmosphere!",
         star_rating: 4,
         created_at: "2022-11-30"
     },
     {
-        place_name: "Garden of Tranquility",
+        place_name: "Rocky Ridge Hiking Trail",
         author: "emily_g",
         body: "Beautiful garden with peaceful walking paths.",
         star_rating: 5,
         created_at: "2023-04-04"
     },
     {
-        place_name: "Rollercoaster Heights",
+        place_name: "Rocky Ridge Hiking Trail",
         author: "johnny123",
         body: "Thrilling rides and fun attractions for the whole family!",
         star_rating: 5,
@@ -490,7 +490,7 @@ module.exports = [
         created_at: "2023-05-09"
     },
     {
-        place_name: "Enchanted Forest Playland",
+        place_name: "Rocky Ridge Hiking Trail",
         author: "maxxer",
         body: "Fun place for kids, but the staff seemed disinterested.",
         star_rating: 3,

@@ -43,8 +43,8 @@ module.exports = [
     },
     {
         place_name: "The Lost Library",
-        latitude: "40.7366",
-        longitude: "-74.0307",
+        latitude: "51.384923",
+        longitude: "-0.176937",
         average_star_rating: 3.8,
         type: "library"
     },
@@ -57,8 +57,8 @@ module.exports = [
     },
     {
         place_name: "Sunset Beach",
-        latitude: "40.5815",
-        longitude: "-73.6332",
+        latitude: "51.52029",
+        longitude: "-0.36675",
         average_star_rating: 4.1,
         type: "beach"
     },
@@ -78,8 +78,8 @@ module.exports = [
     },
     {
         place_name: "Serenity Spa",
-        latitude: "40.7644",
-        longitude: "-73.9737",
+        latitude: "51.4351644",
+        longitude: "-2.1915863",
         average_star_rating: 4.9,
         type: "spa"
     },
@@ -92,8 +92,8 @@ module.exports = [
     },
     {
         place_name: "Gotham City Comics",
-        latitude: "40.7674",
-        longitude: "-73.9853",
+        latitude: "52.6513",
+        longitude: "-0.4861",
         average_star_rating: 4.6,
         type: "bookstore"
     },

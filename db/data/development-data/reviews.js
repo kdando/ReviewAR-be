@@ -49,16 +49,16 @@ module.exports = [
         created_at : "2022-04-18"
     },
     {
-        place_name: "Artistic Alley Gallery",
+        place_name: "Chesters",
         author: "hannah_k",
-        body: "Interesting exhibits, but the gallery could be more organized.",
+        body: "Always had a wonderful experience . Food quality is good . 100% recommended",
         star_rating: 3,
         created_at : "2021-08-09"
     },
     {
-        place_name: "Rusty's Dive Bar",
+        place_name: "Chesters",
         author: "sophie21",
-        body: "Fun atmosphere but the drinks were a bit watered down.",
+        body: "Just a quick meal around the average price but you always have to wait at least ten minutes",
         star_rating: 3,
         created_at : "2022-11-11"
     },
@@ -98,45 +98,45 @@ module.exports = [
         created_at : "2023-04-02"
     },
     {
-        place_name: "Serenity Spa",
+        place_name: "Chesters",
         author: "ryan_99",
-        body: "Relaxing atmosphere and professional service.",
+        body: "The food was 10/10. The environment was so good. And they have a good service",
         star_rating: 5,
         created_at : "2021-12-11"
     },
     {
-        place_name: "Serenity Spa",
+        place_name: "Chesters",
         author: "lily_m",
-        body: "Nice spa, but the prices were a bit high.",
-        star_rating: 3,
+        body: "Loved this place, cheap, clean, fast service, all round great place to visit for some chicken and fries, all washed down with a cold bottle of water.",
+        star_rating: 5,
         created_at : "2023-01-28"
     },
     {
-        place_name: "Rocky Ridge Hiking Trail",
+        place_name: "Golden Apple",
         author: "jackson_j",
-        body: "Scenic trail with breathtaking views.",
+        body: "Always hot great food customer service is amazing always happy never an issue",
         star_rating: 5,
         created_at : "2022-06-15"
     },
     {
-        place_name: "Rocky Ridge Hiking Trail",
+        place_name: "Golden Apple",
         author: "zoey_r",
-        body: "Moderate difficulty trail with lots of wildlife.",
-        star_rating: 4,
+        body: "Not what I remember used to be so good Friday night regular treat",
+        star_rating: 3,
         created_at : "2021-10-09"
     },
     {
-        place_name: "Gotham City Comics",
+        place_name: "Golden Apple",
         author: "hannah_k",
-        body: "Great selection of comics and collectibles.",
+        body: "Good price big portions lovey chips 👍",
         star_rating: 5,
         created_at : "2023-03-07"
     },
     {
-        place_name: "Gotham City Comics",
+        place_name: "Golden Apple",
         author: "alex_the_great",
-        body: "Cool store, but the staff seemed uninterested.",
-        star_rating: 3,
+        body: "Bought a take away and booked delivery. Great service delivered as promised lovely tasty food well worth the order good value too.",
+        star_rating: 5,
         created_at : "2022-02-19"
     },
     {
@@ -161,23 +161,23 @@ module.exports = [
         created_at : "2022-11-30"
     },
     {
-        place_name: "Carnival Cafe",
+        place_name: "AKWAABA",
         author: "nathan_cool",
-        body: "Friendly staff, but the coffee was too bitter.",
-        star_rating: 2,
+        body: "It was absolutely delicious. Engaging and friendly owner. Very clean and neat restaurant but the ambience could be improved.",
+        star_rating: 5,
         created_at : "2021-08-17"
     },
     {
-        place_name: "Sky High Skating Rink",
+        place_name: "AKWAABA",
         author: "emily_g",
-        body: "Fun place to skate, but the music was too loud.",
-        star_rating: 4,
+        body: "We had a great time here!! We're so full after an amazing service and wonderful flavoursome dishes. I ordered the Fufu with light soup and my partner had the TZ but they were both so good that we shared each dish. We will definitely come back when we're in the area again. Thank you ☺️ 🙏🏾",
+        star_rating: 5,
         created_at : "2023-02-05"
     },
     {
-        place_name: "Sky High Skating Rink",
+        place_name: "AKWAABA",
         author: "lucy_sky",
-        body: "Decent skating rink, but it could be cleaner.",
+        body: "DWow this is the best Ghana  food place in Manchester.  The food is very delicious. I had Tuo Zaafi wow it was so good for the price. Definitely worth it",
         star_rating: 3,
         created_at : "2022-10-28"
     },

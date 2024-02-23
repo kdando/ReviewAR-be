@@ -42,25 +42,25 @@ module.exports = [
         type: "bakery"
     },
     {
-        place_name: "The Lost Library",
-        latitude: "51.384923",
-        longitude: "-0.176937",
-        average_star_rating: 3.8,
-        type: "library"
+        place_name: "Chesters",
+        latitude: "53.527933719899174",
+        longitude: "-2.189450344559339",
+        average_star_rating: 4,
+        type: "fast food"
     },
     {
-        place_name: "Pizza Palace",
-        latitude: "40.7695",
-        longitude: "-73.9609",
-        average_star_rating: 4.0,
+        place_name: "Golden Apple",
+        latitude: "53.51428473270319",
+        longitude: "-2.19270738751951",
+        average_star_rating: 4.25,
+        type: "fast food"
+    },
+    {
+        place_name: "AKWAABA",
+        latitude: "53.514974747422286",
+        longitude: "-2.1923859936022403",
+        average_star_rating: 5.0,
         type: "restaurant"
-    },
-    {
-        place_name: "Sunset Beach",
-        latitude: "51.52029",
-        longitude: "-0.36675",
-        average_star_rating: 4.1,
-        type: "beach"
     },
     {
         place_name: "Thrill Seekers Theme Park",

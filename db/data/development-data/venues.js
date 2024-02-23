@@ -64,15 +64,15 @@ module.exports = [
     },
     {
         place_name: "Thrill Seekers Theme Park",
-        latitude: "40.7140",
-        longitude: "-74.0060",
+        latitude: "51.52014248984326",
+        longitude: "-0.3667249577896143",
         average_star_rating: 4.9,
         type: "amusement park"
     },
     {
         place_name: "Dive In Movie Theater",
-        latitude: "40.7413",
-        longitude: "-74.0031",
+        latitude: "51.384599949078265",
+        longitude: "-0.17508783054576124",
         average_star_rating: 3.5,
         type: "cinema"
     },
@@ -85,8 +85,8 @@ module.exports = [
     },
     {
         place_name: "Rocky Ridge Hiking Trail",
-        latitude: "40.7051",
-        longitude: "-74.0092",
+        latitude: "51.43536933617907",
+        longitude: "-2.190253265507622",
         average_star_rating: 4.3,
         type: "trail"
     },

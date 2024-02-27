@@ -22,7 +22,8 @@ function fetchReviewsByVenue (venue_id) {
 
     return connection.query(
         `SELECT * FROM reviews 
-        WHERE venue_id = $1;`, [venue_id])
+        WHERE venue_id = $1
+        ORDER BY created_at DESC;`, [venue_id])
         .then((response) => {
             return response.rows
         })

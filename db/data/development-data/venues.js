@@ -43,8 +43,8 @@ module.exports = [
     },
     {
         place_name: "Chesters",
-        latitude: "53.527933719899174",
-        longitude: "-2.189450344559339",
+        latitude: "53.514014057746905", 
+        longitude: "-2.195110916462241",
         average_star_rating: 4,
         type: "fast food"
     },

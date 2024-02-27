@@ -348,5 +348,13 @@ module.exports = [
         longitude: "-73.9779",
         average_star_rating: 3.5,
         type: "travel agency"
-    }
+    },
+    {
+        place_name: "Circle Library",
+        latitude: "51.3854753",
+        longitude: "-0.174766",
+        average_star_rating: 4,
+        type: "library"
+    },
+
 ]

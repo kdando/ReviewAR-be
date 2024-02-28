@@ -699,5 +699,26 @@ module.exports = [
         star_rating: 3,
         created_at: "2023-10-05"
     },
+    {
+        place_name: "Circle Library",
+        author: "olivia_c",
+        body: "The Library is bright and clean.",
+        star_rating: 4,
+        created_at: "2022-09-05"
+    },
+    {
+        place_name: "Circle Library",
+        author: "lucy_sky",
+        body: "Nice library, very quiet and relaxing.",
+        star_rating: 5,
+        created_at: "2023-08-05"
+    },
+    {
+        place_name: "Circle Library",
+        author: "david_88",
+        body: "Excellent service and advice. Limited book selection.",
+        star_rating: 3,
+        created_at: "2023-10-05"
+    },
 
 ]

@@ -42,9 +42,9 @@ module.exports = [
         type: "bakery"
     },
     {
-        place_name: "Chesters",
-        latitude: "53.514014057746905", 
-        longitude: "-2.195110916462241",
+        place_name: "Gio Ristorante",
+        latitude: "53.477173109310414", 
+        longitude: "-2.244205438645854",
         average_star_rating: 4,
         type: "fast food"
     },
@@ -348,13 +348,5 @@ module.exports = [
         longitude: "-73.9779",
         average_star_rating: 3.5,
         type: "travel agency"
-    },
-    {
-        place_name: "Circle Library",
-        latitude: "51.3854753",
-        longitude: "-0.174766",
-        average_star_rating: 4,
-        type: "library"
-    },
-
+    }
 ]

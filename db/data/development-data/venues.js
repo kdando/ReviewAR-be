@@ -91,11 +91,11 @@ module.exports = [
         type: "trail"
     },
     {
-        place_name: "Gotham City Comics",
-        latitude: "52.6513",
-        longitude: "-0.4861",
+        place_name: "Jolly Brewer",
+        latitude: "52.65151",
+        longitude: "-0.48597",
         average_star_rating: 4.6,
-        type: "bookstore"
+        type: "pub"
     },
     {
         place_name: "Mystery Mansion Escape Room",

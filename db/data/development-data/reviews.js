@@ -294,9 +294,9 @@ module.exports = [
         created_at: "2021-12-03"
     },
     {
-        place_name: "Gotham City Comics",
+        place_name: "Jolly Brewer",
         author: "lily_m",
-        body: "Love browsing through the comic collections!",
+        body: "Live music added a great touch. Definitely coming back for the 'Midnight Hops'.",
         star_rating: 4,
         created_at: "2023-02-15"
     },
@@ -588,9 +588,9 @@ module.exports = [
         created_at: "2022-08-05"
     },
     {
-        place_name: "Gotham City Comics",
+        place_name: "Jolly Brewer",
         author: "johnny123",
-        body: "Wide selection of comics, but prices were high.",
+        body: "Wide selection of ales, but prices were high.",
         star_rating: 3,
         created_at: "2023-05-18"
     },

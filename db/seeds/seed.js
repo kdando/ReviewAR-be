@@ -3,6 +3,8 @@ const format = require("pg-format");
 const db = require("../connection");
 const { createRef, formatReviews } = require("./utils");
 
+let venueIdLookup = {};
+
 const seed = ({ venueData, userData, reviewData }) => {
   return db
     .query(`DROP TABLE IF EXISTS reviews;`)
@@ -70,12 +72,13 @@ const seed = ({ venueData, userData, reviewData }) => {
       const userRows = res[0].rows;
       const venueRows = res[1].rows;
       const userIdLookup = createRef(userRows, "username", "user_id");
-      const venueIdLookup = createRef(venueRows, "place_name", "venue_id");
+      venueIdLookup = createRef(venueRows, "place_name", "venue_id");
       const formattedReview = formatReviews(
         reviewData,
         venueIdLookup,
         userIdLookup
       );
+      
       const insertReviewsQueryStr = format(
         `INSERT INTO reviews (venue_id, user_id, author, place_name, body, star_rating, created_at) VALUES %L;`,
         formattedReview.map(
@@ -91,6 +94,18 @@ const seed = ({ venueData, userData, reviewData }) => {
         )
       );
       return db.query(insertReviewsQueryStr);
+    })
+    .then(() => {
+      // SET TRUE AVG RATINGS FOR VENUES FROM REVIEWS TABLE
+      const updateVenuesQuery = `
+        UPDATE venues 
+        SET average_star_rating = (
+          SELECT AVG(star_rating) 
+          FROM reviews 
+          WHERE reviews.venue_id = venues.venue_id
+        );`;
+  
+      return db.query(updateVenuesQuery);
     })
     .catch((error) => {
       console.log("Error seeding database :(", error);

@@ -1,6 +1,6 @@
 module.exports = [
     {
-        place_name: "Mcdonald's",
+        place_name: "McDonald's",
         latitude: "53.47593757026069",
         longitude: "-2.24292696922962",
         average_star_rating: 3.2,

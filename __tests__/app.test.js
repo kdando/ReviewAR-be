@@ -42,7 +42,7 @@ describe("GET requests", () => {
                 expect(venue.place_name).toBe("Café Latte");
                 expect(venue.latitude).toBe("40.748817");
                 expect(venue.longitude).toBe("-73.985428");
-                expect(venue.average_star_rating).toBe("4.8");
+                expect(venue.average_star_rating).toBe("4.5");
             })
         })
 
@@ -80,17 +80,17 @@ describe("GET requests", () => {
                 expect(Array.isArray(reviews)).toBe(true);
                 expect(reviews.length).toBe(2);
                 expect(reviews[0]).toMatchObject(    {
-                    place_name: "Artistic Alley Gallery",
-                    author: "emily_g",
-                    body: "Fascinating art pieces! Loved exploring the gallery.",
-                    star_rating: "4.0",
+                    author: 'alex_the_great',
+                    place_name: 'Artistic Alley Gallery',
+                    body: 'Not impressed. The exhibits seemed uninspired and poorly curated.',
+                    star_rating: '2.0',
                   })
-                  expect(reviews[1]).toMatchObject(    {
-                    place_name: "Artistic Alley Gallery",
-                    author: "alex_the_great",
-                    body: "Not impressed. The exhibits seemed uninspired and poorly curated.",
-                    star_rating: "2.0",
-                  })
+                expect(reviews[1]).toMatchObject(    {
+                    author: 'emily_g',
+                    place_name: 'Artistic Alley Gallery',
+                    body: 'Fascinating art pieces! Loved exploring the gallery.',
+                    star_rating: '4.0',
+                })
             })
 
         })

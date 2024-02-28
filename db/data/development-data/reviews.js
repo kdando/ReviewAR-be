@@ -49,14 +49,14 @@ module.exports = [
         created_at : "2022-04-18"
     },
     {
-        place_name: "Chesters",
+        place_name: "Gio Ristorante",
         author: "hannah_k",
         body: "Always had a wonderful experience . Food quality is good . 100% recommended",
         star_rating: 3,
         created_at : "2021-08-09"
     },
     {
-        place_name: "Chesters",
+        place_name: "Gio Ristorante",
         author: "sophie21",
         body: "Just a quick meal around the average price but you always have to wait at least ten minutes",
         star_rating: 3,
@@ -98,14 +98,14 @@ module.exports = [
         created_at : "2023-04-02"
     },
     {
-        place_name: "Chesters",
+        place_name: "Gio Ristorante",
         author: "ryan_99",
         body: "The food was 10/10. The environment was so good. And they have a good service",
         star_rating: 5,
         created_at : "2021-12-11"
     },
     {
-        place_name: "Chesters",
+        place_name: "Gio Ristorante",
         author: "lily_m",
         body: "Loved this place, cheap, clean, fast service, all round great place to visit for some chicken and fries, all washed down with a cold bottle of water.",
         star_rating: 5,

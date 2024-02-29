@@ -295,9 +295,9 @@ module.exports = [
     },
     {
         place_name: "Jolly Brewer",
-        author: "lily_m",
+        author: "mike_w",
         body: "Live music added a great touch. Definitely coming back for the 'Midnight Hops'.",
-        star_rating: 4,
+        star_rating: 5,
         created_at: "2023-02-15"
     },
     {
@@ -590,8 +590,8 @@ module.exports = [
     {
         place_name: "Jolly Brewer",
         author: "johnny123",
-        body: "Wide selection of ales, but prices were high.",
-        star_rating: 3,
+        body: "Prices were a little high but wide selection of ales made me really happy!!",
+        star_rating: 5,
         created_at: "2023-05-18"
     },
     {
@@ -720,5 +720,25 @@ module.exports = [
         star_rating: 3,
         created_at: "2023-10-05"
     },
-
+    {
+        place_name: "Jolly Brewer",
+        author: "olivia_c",
+        body: "Cozy vibes, great brews! A must-visit spot.",
+        star_rating: 5,
+        created_at: "2022-09-15"
+    },
+    {
+        place_name: "Jolly Brewer",
+        author: "lily_m",
+        body: "Amazing staff, top-notch beers.",
+        star_rating: 5,
+        created_at: "2022-10-15"
+    },
+    {
+        place_name: "Jolly Brewer",
+        author: "david_88",
+        body: "Loved it! Great music and drinks. ",
+        star_rating: 5,
+        created_at: "2022-11-15"
+    },
 ]
